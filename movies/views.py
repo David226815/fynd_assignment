@@ -29,7 +29,7 @@ class movieslist(APIView):
 
 class MovieSearchInList(APIView):
 
-    def get(self, request,movie_name):
+    def get(self, request, movie_name):
         # movie_name = self.request.query_params.get('movie_name')
         q = Q(m_title__icontains=movie_name) | Q(m_director__icontains=movie_name)
         movies_obj = Movies.objects.filter(q)

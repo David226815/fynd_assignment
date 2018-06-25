@@ -13,7 +13,7 @@ urlpatterns = [
 
     # For API View
     url(r'^movies/', views.movieslist.as_view()),
-    url(r'^search-movies/(.*)/', views.MovieSearchInList.as_view()),
+    url(r'^search-movies/(.*)/', views.MovieSearchInList.as_view()), # (.*) should be replaced with a movie name or word which need to match
 
     # from JSOn file to db
     url(r'^load_movies', views.load_movies, name='load_movies'),

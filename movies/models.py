@@ -1,7 +1,4 @@
-from django.contrib.auth.models import User
 from django.db import models
-from constants import *
-from multiselectfield import MultiSelectField
 
 
 class Movies(models.Model):
