@@ -18,7 +18,14 @@ a:focus, a:hover {
 
 {% block body_content %}
 <div class="container">
-  <h1 class="my-4">View All Movies</h1>
+  <div class="row">
+    <h1 class="my-4">View All Movies</h1>
+    <div style="margin-top:35px;padding-left:35px;">
+      <a href="/" class="btn btn-sucess pull-right" >
+        <i class="fa fa-search" style="padding-right:10px;"></i>
+        Search a Movie Here</a>
+    </div>
+  </div>
   <div class="row">
      {% for row in movies_obj %}
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" style="padding-bottom:20px;">
@@ -28,17 +35,17 @@ a:focus, a:hover {
               </a>
             <div class="card2-body">
               <h4 class="card2-title">
-                <a href="#">{{ row.name }}</a>
-                <input type="hidden" id="title_{{row.name}}" value="{{ row.name }}"/>
+                <a href="#">{{ row.m_title }}</a>
+                <input type="hidden" id="title_{{row.m_id}}" value="{{ row.m_title }}"/>
               </h4>
-              <p class="card2-text">- By {{ row.director }}</p>
-                <p class="card2-text">Genre: {{ row.genre }}</p>
+              <p class="card2-text">- By {{ row.m_director }}</p>
+                <p class="card2-text">Genre: {{ row.m_genre }}</p>
                 <p class="card2-text">
                 <span style="text-align:right;font-size:12px;position:absolute;bottom:0;right:0;">
-                    IMDB Score:
-                  <b style="color:red;font-size:14px;">{{ row.imdb_score }}</b><br/>
+                  IMDB Score:
+                  <b style="color:red;font-size:14px;">{{ row.m_imdb_score }}</b><br/>
                   99popularity:
-                  <b style="color:red;font-size:14px;" id="available_books_{{row.name}}">{{row.99popularity}}</b>
+                  <b style="color:red;font-size:14px;" id="available_books_{{row.m_id}}">{{ row.m_99popularity }}</b>
                 </span>
               </p>
             </div>

@@ -1,20 +1,25 @@
 from __future__ import unicode_literals
-
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.http import HttpResponse
 
+from django.http import HttpResponse
 from rest_framework.urlpatterns import format_suffix_patterns
+
 from movies import views
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
-
     # Admin
     url(r'^admin/', include(admin.site.urls)),
 
+    # For API View
     url(r'^movies/', views.movieslist.as_view()),
+    url(r'^search-movies/(.*)/', views.MovieSearchInList.as_view()),
 
-    url(r'^read_json', views.read_json, name='read_json'),
+    # from JSOn file to db
+    url(r'^load_movies', views.load_movies, name='load_movies'),
+
+    # for UI-Front View
+    url(r'^$', views.home, name='home'),
     url(r'^all_movies', views.all_movies, name='all_movies'),
+    url(r'^search_movie', views.search_movies, name='search_movies'),
 ]
