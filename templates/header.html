@@ -1,0 +1,23 @@
+{% load staticfiles %}
+
+{% block extraconfig %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/nav_menu.css' %}" />
+{% endblock %}
+
+<div class="contaner container-block">
+    <nav id="brand_bar" class="navbar navbar-fixed-top brand-bar box-shadow" style="padding:0px;">
+        <nav class="w3-sidenav w3-collapse w3-white w3-animate-left w3-card-2" style="z-index:3;width:250px;display:none" id="mySidenav">
+            <p style="margin:2px;">
+                <sup>
+                <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large pull-right" style="padding: 8px 3px 4px 16px;">&times;</a>
+                </sup></p>
+            <div style="border-bottom:1px solid #2d2d2a;">
+                <h5 style="font-family:Cambria; text-align:center;">Menu </h5>
+            </div>
+            <div class="col-md-12 col-xs-12" style="padding:0px 5px;">
+
+            </div>
+        </nav>
+    </nav>
+</div>
+<!-- Javascript moved to base.html -->
