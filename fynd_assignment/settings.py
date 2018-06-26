@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'z2(7=&w3o8^y#3txni8-k8-^h+oasqw!l$rrk^mqpal9cugom8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'afternoon-thicket-15778.herokuapp']
+ALLOWED_HOSTS = ['127.0.0.1', 'thawing-springs-96960.herokuapp']
 
 # Application definition
 INSTALLED_APPS = (
