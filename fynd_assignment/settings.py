@@ -25,7 +25,7 @@ SECRET_KEY = 'z2(7=&w3o8^y#3txni8-k8-^h+oasqw!l$rrk^mqpal9cugom8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'thawing-springs-96960.herokuapp']
+ALLOWED_HOSTS = ['127.0.0.1', 'peaceful-island-88973.herokuapp']
 
 # Application definition
 INSTALLED_APPS = (
